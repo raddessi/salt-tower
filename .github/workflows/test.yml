@@ -31,7 +31,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python }}
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.cache/pip
           key: pip-${{ runner.os }}-${{ matrix.python }}-test-${{ hashFiles('pyproject.toml') }}
@@ -46,7 +46,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.cache/pip
           key: pip-${{ runner.os }}-3.8-test-${{ hashFiles('pyproject.toml') }}
@@ -61,7 +61,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.cache/pip
           key: pip-${{ runner.os }}-3.8-test-${{ hashFiles('pyproject.toml') }}
